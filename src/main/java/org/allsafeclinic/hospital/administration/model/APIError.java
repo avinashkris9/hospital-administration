@@ -1,4 +1,4 @@
-package org.allsafeclinic.hospitaladministration.model;
+package org.allsafeclinic.hospital.administration.model;
 
 import java.time.LocalDateTime;
 

@@ -1,8 +1,5 @@
-package org.allsafeclinic.hospitaladministration.entity;
+package org.allsafeclinic.hospital.administration.entity;
 
-
-
-import org.allsafeclinic.hospitaladministration.model.AddressDTO;
 
 
 import javax.persistence.*;
@@ -12,8 +9,7 @@ import javax.persistence.*;
  */
 
 @Entity
-
-		@Table(name="STAFF_DETAILS")
+@Table(name="STAFF_DETAILS")
 public class Staff {
 
     

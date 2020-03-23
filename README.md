@@ -1,14 +1,10 @@
-# I am gonna use this asa @ToDo List
+# Spring boot learning project
+## APIs for imaginary AllSafeClinic.
 
+##### Hospital Administration Rest API for AllSafeClinic
 
-< Immediate>
-1. Add gender to Staff.
-2. Add Exception Handling
-3. Change name to 2 variables. First Name & last Name.!
-4. Add new end points to search by name
-5. Add basic authentication.
-6. Logging !!!!!
+1. Rest end points for DISPLAY/INSERT/UPDATE/DELETE Hospital Staff
+2. Rest end points for DISPLAY/INSERT/UPDATE Patients
 
-<Long Term>
-Https !
-Microservicefy !
+This is a work in progress spring boot learning project.
+

@@ -1,18 +1,15 @@
-package org.allsafeclinic.hospitaladministration.service;
+package org.allsafeclinic.hospital.administration.service;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
-import org.allsafeclinic.hospitaladministration.entity.Staff;
-import org.allsafeclinic.hospitaladministration.exception.StaffNotFoundException;
-import org.allsafeclinic.hospitaladministration.model.StaffDTO;
-import org.allsafeclinic.hospitaladministration.repository.StaffRepository;
-import org.allsafeclinic.hospitaladministration.util.CustomObjectMapper;
-import org.allsafeclinic.hospitaladministration.util.ErrorCodes;
+import org.allsafeclinic.hospital.administration.repository.StaffRepository;
+import org.allsafeclinic.hospital.administration.util.ErrorCodes;
+import org.allsafeclinic.hospital.administration.entity.Staff;
+import org.allsafeclinic.hospital.administration.exception.StaffNotFoundException;
+import org.allsafeclinic.hospital.administration.model.StaffDTO;
+import org.allsafeclinic.hospital.administration.util.CustomObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
@@ -46,7 +43,7 @@ public class StaffService {
 		else
 		{	
 			logger.error(" User not Found !");
-			throw new StaffNotFoundException(ErrorCodes.ERROR_CODES.ERR_NOT_FOUND.name());
+			throw new StaffNotFoundException(ErrorCodes.ERROR_CODES.ERR_STAFF_NOT_FOUND.name());
 		}
 
 	}
@@ -65,7 +62,7 @@ public class StaffService {
 	public StaffDTO updateStaffDetails(long employee_id, StaffDTO staffDTO1) {
 
 		staffDTO1.setEmployeeNumber(employee_id);
-       Optional<Staff> staff= staffRepository.findById(staffDTO1.getEmployeeNumber());
+
 
 
 		staffRepository.save(customObjectMapper.mapStaffDTO2StaffEntity(staffDTO1));

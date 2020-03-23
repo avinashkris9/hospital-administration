@@ -1,9 +1,11 @@
-package org.allsafeclinic.hospitaladministration.util;
+package org.allsafeclinic.hospital.administration.util;
 
-import org.allsafeclinic.hospitaladministration.entity.Address;
-import org.allsafeclinic.hospitaladministration.entity.Staff;
-import org.allsafeclinic.hospitaladministration.model.AddressDTO;
-import org.allsafeclinic.hospitaladministration.model.StaffDTO;
+import org.allsafeclinic.hospital.administration.entity.Address;
+import org.allsafeclinic.hospital.administration.entity.Staff;
+import org.allsafeclinic.hospital.administration.model.StaffDTO;
+import org.allsafeclinic.hospital.administration.entity.Patient;
+import org.allsafeclinic.hospital.administration.model.AddressDTO;
+import org.allsafeclinic.hospital.administration.model.PatientDTO;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -67,6 +69,42 @@ public class CustomObjectMapper {
         staffDTO.setAddress(mapAddressEntity2AddressDTO(staff.getAddress()));
         staffDTO.setGender(String.valueOf(staff.getGender()));
         return staffDTO;
+    }
+
+    public PatientDTO mapPatientEntity2patientDTO(Patient patient)
+    {
+        PatientDTO patientDTO=new PatientDTO();
+        patientDTO.setAge(patient.getAge());
+        patientDTO.setEmergencyContact(patient.getEmail());
+        patientDTO.setEmail(patient.getEmail());
+        patientDTO.setMrnNumber(patient.getMrnNumber());
+        patientDTO.setFirstName(patient.getFirstName());
+        patientDTO.setGender(patient.getGender());
+        patientDTO.setLastName(patient.getLastName());
+        patientDTO.setPhoneNumber(patient.getPhoneNumber());
+        patientDTO.setAddress(mapAddressEntity2AddressDTO(patient.getAddress()));
+        patientDTO.setDateOfRegistration(patient.getDateOfRegistration());
+        patientDTO.setEmergencyContact(patient.getEmergencyContact());
+        return patientDTO;
+
+    }
+
+    public Patient mapPatientDTO2PatientEntity(PatientDTO patientDTO)
+    {
+        Patient patient=new Patient();
+        patient.setAge(patientDTO.getAge());
+        patient.setEmergencyContact(patientDTO.getEmail());
+        patient.setEmail(patientDTO.getEmail());
+        patient.setMrnNumber(patientDTO.getMrnNumber());
+        patient.setFirstName(patientDTO.getFirstName());
+        patient.setGender(patientDTO.getGender());
+        patient.setLastName(patientDTO.getLastName());
+        patient.setPhoneNumber(patientDTO.getPhoneNumber());
+        patient.setAddress(mapAddressDTO2AddressEntity(patientDTO.getAddress()));
+        patient.setDateOfRegistration(patientDTO.getDateOfRegistration());
+        patient.setEmergencyContact(patientDTO.getEmergencyContact());
+        return patient;
+
     }
 
 }

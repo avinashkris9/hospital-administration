@@ -1,4 +1,4 @@
-package org.allsafeclinic.hospitaladministration.entity;
+package org.allsafeclinic.hospital.administration.entity;
 
 import javax.persistence.Embeddable;
 

@@ -1,4 +1,4 @@
-package org.allsafeclinic.hospitaladministration;
+package org.allsafeclinic.hospital.administration;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

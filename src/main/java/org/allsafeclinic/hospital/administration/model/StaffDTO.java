@@ -1,7 +1,7 @@
-package org.allsafeclinic.hospitaladministration.model;
+package org.allsafeclinic.hospital.administration.model;
 
-import org.allsafeclinic.hospitaladministration.util.ErrorCodes;
-import org.allsafeclinic.hospitaladministration.util.IsValidGender;
+import org.allsafeclinic.hospital.administration.util.ErrorCodes;
+import org.allsafeclinic.hospital.administration.util.IsValidGender;
 
 import javax.validation.Valid;
 import javax.validation.constraints.Email;

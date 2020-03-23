@@ -1,4 +1,4 @@
-package org.allsafeclinic.hospitaladministration.util;
+package org.allsafeclinic.hospital.administration.util;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;

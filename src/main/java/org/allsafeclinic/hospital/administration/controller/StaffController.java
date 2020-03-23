@@ -1,12 +1,11 @@
-package org.allsafeclinic.hospitaladministration.controller;
+package org.allsafeclinic.hospital.administration.controller;
 
 import javax.validation.Valid;
 
-import org.allsafeclinic.hospitaladministration.model.StaffDTO;
-import org.allsafeclinic.hospitaladministration.service.StaffService;
+import org.allsafeclinic.hospital.administration.model.StaffDTO;
+import org.allsafeclinic.hospital.administration.service.StaffService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,21 +16,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * AdminisitrationController
+ * Staff Rest Controller
+ * GET/PUT/DELETE/POST
  */
 
 @RestController
 
 @RequestMapping("/admin/staffs")
-public class AdministrationController {
+public class StaffController
+{
 
 	
-	Logger logger = LoggerFactory.getLogger(AdministrationController.class);
+	Logger logger = LoggerFactory.getLogger(StaffController.class);
 
 	private final StaffService staffService;
 
-	@Autowired
-	public AdministrationController(StaffService staffService) {
+
+	public StaffController(StaffService staffService) {
 		this.staffService = staffService;
 	}
 

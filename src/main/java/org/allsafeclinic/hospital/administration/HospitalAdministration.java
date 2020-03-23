@@ -1,15 +1,15 @@
-package org.allsafeclinic.hospitaladministration;
+package org.allsafeclinic.hospital.administration;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
-//@EnableEurekaClient // not needed anymore
+
 @SpringBootApplication
-public class Hospitaladministration {
+public class HospitalAdministration {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Hospitaladministration.class, args);
+		SpringApplication.run(HospitalAdministration.class, args);
 	}
 
 }

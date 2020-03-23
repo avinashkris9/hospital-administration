@@ -1,4 +1,4 @@
-package org.allsafeclinic.hospitaladministration.exception;
+package org.allsafeclinic.hospital.administration.exception;
 
 
 
