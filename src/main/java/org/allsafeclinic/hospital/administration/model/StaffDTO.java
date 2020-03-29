@@ -18,8 +18,7 @@ public class StaffDTO {
 
     
     private long employeeNumber;
-	@NotBlank()
-	private String age;
+	private int age;
 	 @NotNull @Valid
 	private AddressDTO address;
 	@IsValidGender(enumClass = ErrorCodes.Gender.class) @NotBlank
@@ -39,8 +38,8 @@ public class StaffDTO {
     }
     
 	
-	public StaffDTO(long employeeNumber, String firstName, String lastName, String age, AddressDTO address, String phoneNumber, String email,
-					String department, String gender) {
+	public StaffDTO(long employeeNumber, String firstName, String lastName, int age, AddressDTO address, String phoneNumber, String email,
+                    String department, String gender) {
 	
 	this.employeeNumber = employeeNumber;
 	this.firstName = firstName;
@@ -63,10 +62,10 @@ public class StaffDTO {
 		this.employeeNumber = employeeNumber;
 	}
 
-	public String getAge() {
+	public int getAge() {
 		return age;
 	}
-	public void setAge(String age) {
+	public void setAge(int age) {
 		this.age = age;
 	}
 	public AddressDTO getAddress() {

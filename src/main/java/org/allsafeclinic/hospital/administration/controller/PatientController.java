@@ -28,6 +28,12 @@ public class PatientController {
     }
 
 
+    /**
+     *
+     *
+     * @return List object of patients
+     * @exception  if no patient object found
+     */
     @GetMapping()
     public List<PatientDTO> getAllPatientDetails()
     {
@@ -36,12 +42,28 @@ public class PatientController {
 
     }
 
+
+    /**
+     *
+     *
+     * @param medicalRecordNumber
+     * @return PatientObject
+     * @exception  if no patient found
+     */
     @GetMapping("/{medicalRecordNumber}")
     public PatientDTO getStaffDetails(@PathVariable long medicalRecordNumber)
     {
         return patientService.getPatientDetailsByMrNumber(medicalRecordNumber);
 
     }
+
+
+    /**
+     *
+     * @param patientDTO
+     * validate the patientObject
+     * @exception  if validation fails
+     */
     @PostMapping()
     public void addPatientDetails(@RequestBody @Valid PatientDTO patientDTO)
     {
@@ -49,6 +71,13 @@ public class PatientController {
         patientService.insertPatientDetails(patientDTO);
     }
 
+    /**
+     *
+     *
+     * @param patientDTO
+     * validate patient object
+     *
+     */
     @PutMapping()
     public void updatePatientDetails(@RequestBody  @Valid  PatientDTO patientDTO)
     {

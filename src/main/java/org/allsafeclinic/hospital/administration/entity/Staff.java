@@ -20,7 +20,7 @@ public class Staff {
 
 	private String firstName;
 	private String lastName;
-    private String age;
+    private int age;
 	@Embedded
     private Address address;
     private String phoneNumber;
@@ -42,11 +42,11 @@ public class Staff {
 
 	
 
-	public String getAge() {
+	public int getAge() {
 		return age;
 	}
 
-	public void setAge(String age) {
+	public void setAge(int age) {
 		this.age = age;
 	}
 
@@ -104,9 +104,9 @@ public class Staff {
 		this.lastName = lastName;
 	}
 
-	public Staff(long employeeNumber, String firstName, String lastName, String age, Address address,
+	public Staff( String firstName, String lastName, int age, Address address,
 				 String phoneNumber, String email, String department, char gender) {
-		this.employeeNumber = employeeNumber;
+
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
